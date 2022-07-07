@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="#fff">
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="7dp"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Date"
+        android:textSize="16sp"
+        android:textColor="#2b9fd1"/>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC"
+        android:layout_below="@+id/text"
+        android:id="@+id/view"/>
+<RelativeLayout
+    android:layout_below="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="5dp">
+
+   <TextView
+       android:id="@+id/from"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="From"
+       android:textSize="16sp" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:layout_below="@+id/from"
+        android:id="@+id/fromdate"
+        android:hint=" Select Date"
+        android:textColor="#000"
+        android:padding ="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bordercredentials"
+        android:focusableInTouchMode="false"/>
+
+    <TextView
+        android:layout_marginTop="7dp"
+        android:layout_below="@+id/fromdate"
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_marginTop="5dp"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/to"
+        android:id="@+id/todate"
+        android:background="@drawable/bordercredentials"
+        android:padding="5dp"
+        android:hint="Select Date"
+        android:textSize="13sp"
+        android:textColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:background="@drawable/borderbutton"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:layout_below="@+id/todate"
+        android:id="@+id/submit"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/laycv1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/attend"
+        android:gravity="center"
+        android:weightSum="4">
+
+        <TextView
+            android:textSize="13sp"
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="11/04/1998"
+            android:fontFamily="@font/ubuntu"/>
+
+        <TextView
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="11:05 am"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:id="@+id/inTime" />
+
+        <TextView
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="11:05 am"
+            android:fontFamily="@font/ubuntu"
+            android:id="@+id/outTime" />
+
+        <TextView
+            android:text="02:02:00"
+            android:textSize="13sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/ubuntu"
+            android:id="@+id/duration" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@id/laycv1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="#cfcaca"
+        android:gravity="center" />
+
+</RelativeLayout>

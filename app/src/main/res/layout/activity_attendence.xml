@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AttendenceActivity">
+
+    <RelativeLayout
+        android:id="@+id/attend"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#2b9fd1">
+
+        <RelativeLayout
+            android:id="@+id/arrowback3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left_arrow" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/arrowback3"
+            android:fontFamily="@font/ubuntu"
+            android:text="Attendance"
+            android:textColor="#ffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/laycv1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/attend"
+        android:layout_gravity="center_vertical"
+        android:background="#69c4ec"
+        android:weightSum="5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1.1"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Date"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1.4"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Intime"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.4"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Outtime"
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.1"
+            android:fontFamily="@font/ubuntu"
+            android:gravity="center"
+            android:text="Duration"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        shimmer:duration="800">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+            <include layout="@layout/shimmerprofile" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/attendancerecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/laycv1"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

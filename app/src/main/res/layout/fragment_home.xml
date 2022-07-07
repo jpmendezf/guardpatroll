@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+
+            <ImageView
+                android:scaleType="centerInside"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_logoo" />
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/ic_logout" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/toolbar"
+            android:background="#dcdcdc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="5dp">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                shimmer:duration="800">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmerprofile" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/companyinfo"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:paddingBottom="1dp">
+
+
+                <LinearLayout
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/cname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2885ad"
+                        android:textSize="15sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/sfpro"/>
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/sfpro"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/c1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:elevation="5dp">
+
+                    <RelativeLayout
+                        android:clickable="true"
+                        android:id="@+id/viewattendence"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/borderduration">
+
+                        <ImageView
+                            android:layout_marginLeft="15dp"
+                            android:id="@+id/clock"
+                            android:background="@drawable/borderclock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_clock"
+                            android:layout_centerVertical="true"/>
+
+                        <RelativeLayout
+                            android:id="@+id/r1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="13dp"
+                            android:layout_toRightOf="@+id/clock">
+
+                            <TextView
+                                android:id="@+id/textShift"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sfpro"
+                                android:text="Shift : "
+                                android:textColor="#fff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="1dp"
+                                android:layout_toRightOf="@+id/textShift"
+                                android:fontFamily="@font/sfpro"
+                                android:textColor="#fff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/shiftD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textShift"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/sfpro"
+                                android:textColor="#fff"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/intime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="27dp"
+                                android:layout_marginRight="5dp"
+                                android:fontFamily="@font/sfpro"
+                                android:textColor="#fff"
+                                android:textSize="10sp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/c2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="5dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+                    
+                    <RelativeLayout
+                        android:clickable="true"
+                        android:id="@+id/r2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/sfpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Rounds"
+                            android:drawableLeft="@drawable/ic_tick"
+                            android:drawablePadding="10dp"
+                            android:textSize="15sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/tround"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:textColor="#2885ad"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_right_arrow"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/missR"
+                            android:clickable="true"
+                            android:layout_marginTop="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:fontFamily="@font/sfpro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Missed Checkpoints"
+                                android:drawableLeft="@drawable/ic_cancel"
+                                android:drawablePadding="10dp"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/check"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="00"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="28dp"
+                                android:textColor="#E04F5F"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_right_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"/>
+                        </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:fontFamily="@font/sfpro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Past Rounds"
+                            android:drawableLeft="@drawable/ic_circle_with_check_symbol"
+                            android:drawablePadding="10dp"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/cround"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="28dp"
+                            android:textColor="#4ea62b"
+                            android:textSize="18sp"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:id="@+id/startScan"
+                    android:fontFamily="@font/sfpro"
+                    android:clickable="true"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_marginBottom="17dp"
+                    android:background="@drawable/bordercapture"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_below="@+id/c2"
+                    android:textColor="#2885ad"
+                    android:layout_width="match_parent"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_height="50dp"
+                    android:text="Scan and Collect Checkpoints"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:foreground="@drawable/ripple_effect"
+        android:clickable="true"
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_lantern" />
+</FrameLayout>
+

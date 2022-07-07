@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/borderscancheckpoint"
+    tools:context=".Activities.ScanCheckpoint">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:id="@+id/strtscanning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/borderscan"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="7dp"
+            android:paddingRight="18dp"
+            android:paddingBottom="7dp">
+
+            <ImageView
+                android:id="@+id/clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/borderclock"
+                android:padding="8dp"
+                android:paddingLeft="3dp"
+                android:src="@drawable/ic_photo_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/clock"
+                android:fontFamily="@font/sfpro"
+                android:text="Scan Checkpoint"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/arrowback2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_left_arrow" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/flash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/borderscan"
+            android:padding="12dp"
+            android:src="@drawable/ic_lantern" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/ii"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="75dp"
+            android:src="@drawable/qrcode" />
+
+        <TextView
+            android:id="@+id/nf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ii"
+            android:layout_marginLeft="95dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="65dp"
+            android:fontFamily="@font/sfpro"
+            android:text="Checkpoints not found"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/vv"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/nf"
+            android:layout_marginLeft="65dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="65dp"
+            android:background="#DCDCDC" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vv"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="67dp"
+            android:text="Click on above Checkpoint button to collect or scan checkpoints"
+            android:textAlignment="center"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
